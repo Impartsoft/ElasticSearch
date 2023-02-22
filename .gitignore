@@ -1,4 +1,4 @@
-
 .vs/*
-bin/*
-obj/*
+ElasticSearch/.vs/*
+ElasticSearch/bin/*
+ElasticSearch/obj/*

@@ -1,5 +1,9 @@
-﻿using System;
-using Elastic.Clients.Elasticsearch;
-using Elastic.Clients.Elasticsearch.QueryDsl;
+﻿using Elasticsearch.Net;
+using Nest;
 
-var client = new ElasticsearchClient();
+
+const string IndexName = "estest";
+
+var client = new ElasticClient("CLOUDID", new BasicAuthenticationCredentials("elastic", "password"));
+
+var existsResponse = await client.Indices.ExistsAsync(IndexName);
